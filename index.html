@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,55 +8,63 @@
 </head>
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <header>
-      <h1>AutoShorts AI</h1>
-      <p>AI-powered YouTube content intelligence</p>
-    </header>
+  <header>
+    <h1>AutoShorts AI</h1>
+    <p>Your AI YouTube Content Studio</p>
+  </header>
+
+  <div class="card">
+    <h2>Channel Analyzer</h2>
+    <input type="url" id="channelUrl"
+      placeholder="Paste YouTube channel link">
+
+    <button onclick="analyzeChannel()">
+      Analyze Channel
+    </button>
+
+    <p id="status" class="status"></p>
+  </div>
+
+  <div id="results" style="display:none">
 
     <div class="card">
-      <h2>Channel Analyzer</h2>
-      <p>Enter a YouTube channel link to begin content research.</p>
-
-      <input
-        type="url"
-        id="channelUrl"
-        placeholder="Paste YouTube channel URL here"
-      >
-
-      <button onclick="analyzeChannel()">
-        Analyze Channel
-      </button>
-
-      <p id="status" class="status"></p>
+      <h2>📊 Channel Analysis</h2>
+      <p id="channelName">Channel:</p>
+      <p>Analysis status: Awaiting API connection</p>
     </div>
 
     <div class="card">
-      <h2>Content Studio</h2>
-      <p>Discover topics, highlights and Shorts opportunities.</p>
-      <p>🎯 Content Analysis</p>
-      <p>✂️ Shorts Clip Finder</p>
-      <p>💬 Auto Subtitles</p>
-      <p>📝 SEO Titles & Descriptions</p>
-      <p>📅 Upload Planner</p>
+      <h2>🔥 Content Ideas</h2>
+      <p>Best performing topics will appear here.</p>
     </div>
 
     <div class="card">
-      <h2>About</h2>
-      <p>
-        AutoShorts AI is a content research and Shorts
-        creation dashboard designed to help creators
-        discover engaging content opportunities.
-      </p>
+      <h2>✂️ Shorts Studio</h2>
+      <p>30-second clip finder</p>
+      <p>Auto subtitles</p>
+      <p>Vertical video editing</p>
     </div>
 
-    <footer>
-      AutoShorts AI · Creator Studio
-    </footer>
+    <div class="card">
+      <h2>📝 SEO Studio</h2>
+      <p>AI Titles</p>
+      <p>Descriptions</p>
+      <p>Tags & Hashtags</p>
+    </div>
+
+    <div class="card">
+      <h2>📅 Upload Planner</h2>
+      <p>Best posting time analysis coming soon.</p>
+    </div>
 
   </div>
 
-  <script src="script.js"></script>
+  <footer>AutoShorts AI · Free Creator Studio</footer>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
