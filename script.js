@@ -6,16 +6,24 @@ async function analyzeChannel() {
   const url = input.value.trim();
 
   if (!url) {
-    status.textContent = "Please paste a YouTube channel link first.";
+    status.textContent = "Please paste a YouTube channel link.";
     return;
   }
 
   if (!url.includes("youtube.com")) {
-    status.textContent = "Please enter a valid YouTube channel URL.";
+    status.textContent = "Invalid YouTube link!";
     return;
   }
 
-  status.textContent = "Channel link received! Analysis engine is coming soon.";
+  status.textContent = "Channel link accepted! Preparing analysis...";
 
-  console.log("Channel URL:", url);
+  let channelName = "YouTube Channel";
+
+  if (url.includes("@")) {
+    channelName = url.split("@")[1].split("/")[0];
+  }
+
+  status.textContent =
+    "Channel detected: " + channelName +
+    " | AI Analysis engine not connected yet.";
 }
